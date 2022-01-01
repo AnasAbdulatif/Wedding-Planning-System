@@ -2,7 +2,7 @@ var express=require('express')
 var indexRouter=require('./routes/index.js')
 const { auth } = require('express-openid-connect');
 const dotenv=require('dotenv');
-dotenv.config({path:'./.env'});
+dotenv.config({path:'./config.env'});
 const ejs=require('ejs');
 const mongoose = require('mongoose');
 const axios=require('axios');
@@ -22,9 +22,6 @@ const moviesSchema = {
 
 const Movie = mongoose.model('Movie', moviesSchema);
 
-let aaa=Movie.find({"title":"avengers"});
-let b=aaa.year;
-console.log(b);
 app.get('/invitation', (req, res) => {
     Movie.findOne({"title":"ahmeda"}, function(err, movies) {
       //  let catchData={};
