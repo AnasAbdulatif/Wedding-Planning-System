@@ -1,0 +1,256 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <!--  SETTING THE CHARACTER SET -->
+  <meta charset="UTF-8">
+  <!-- SETTING THE CONTENT OF THE PAGE TO BE RESPONSIVE TO DEVICE WIDTH (MOBILE FIRST) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!--  SETUP META DATA FOR THIS PAGE -->
+  <meta name="keywords" content="WEDDING,PLANNER,PLAN,ASSIGNMENT,">
+  <meta name="author" content="Hasib Ahmed">
+  <title> YourDay </title>
+  <!--  INCLUDE OUR CSS STYLE SHEETS, USING W3 CSS, GOOGLE APIS AND FONTAWESOME -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <!-- Google font -->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  
+      <!-- Bootstrap -->
+      <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+  
+      <!-- Custom stlylesheet -->
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <!--NAVBAR-->
+<div class="w3-top">
+  <div class="w3-bar w3-dark-grey" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" 
+    href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+      </a>
+<a  href="/" class="w3-bar-item w3-button"><i class="fa fa-home w3-margin-right"></i><b>Your</b>Day</a>
+  <a href="/payment" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-th"></i> Payment</a>
+  <a href="/venues_merseyside" class="w3-bar-item w3-button"><i class="fa fa-globe"></i> Venues</a>
+  <a href="/reservation" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-envelope"></i> Make Reservation</a>
+          <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-envelope"></i> Invitation QR</a>
+          <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-globe"></i> Map</a>
+          <a onclick="document.location='/login/'" class="w3-bar-item w3-button"> <i class='fas fa-sign-in-alt'></i> sign in</a>
+          <a onclick="document.location='/logout/'" class="w3-bar-item w3-button"> <i class='fas fa-sign-in-alt'></i> sign out</a>
+
+ </div>
+        <!-- Navbar on small screens -->
+        <div id="navSmall" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-hide-medium">
+          <a href="/venues_merseyside" class="w3-bar-item w3-button">Venues</a>
+          <a href="/payment" class="w3-bar-item w3-button">Payment</a>
+          <a onclick="document.location='/login/'" class="w3-bar-item w3-button">sign in</a>
+          <a onclick="document.location='/logout/'" class="w3-bar-item w3-button">sign out</a>
+        </div>
+      </div>
+
+        <div id="booking" class="section">
+          <div class="section-center">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-7 col-md-push-5">
+                          <div class="booking-cta">
+                              <h1>Reserve your wedding hall</h1>
+                              <p>Choose your wedding hall, and specify your wedding date! Specify your expected number of guests to generate QR code invitations accordingly. You can also choose your preferred way of serving food.
+                              </p>
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-md-pull-7">
+                          <div class="booking-form">
+                              <form id = "reservation-form" >
+                                  
+                                      <div class="form-group">
+                                        <span class="form-label">Wedding Hall Name</span>
+                                        <select id="weddinghall" class="form-control", name="whName">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                  
+                                  <div class="row">
+                                      <div class="col-sm-12">
+                                          <div class="form-group">
+                                              <span class="form-label">Reservation Date</span>
+                                              <input class="form-control" type="date" required>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <span class="form-label">Number of Guests</span>
+                                    <input class="form-control" type="number" name = "guests" id = "numOfGuests" value = "NumberOfGuests" placeholder="Enter expected number of guests">                                        
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-12">
+                                          <div class="form-group">
+                                              <span class="form-label">Food Serving</span>
+                                              <select class="form-control">
+                                                  <option id = "buffet" name = "foodServing" value = "Buffet">Buffet</option>
+                                                  <option id = "platters" name = "foodServing" value = "Platters">Platters/Table Serving</option>
+                                                  <option id = "cake" name = "foodServing" value = "Cake">Cake/Appetizers</option>
+                                              </select>
+                                              <span class="select-arrow"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-btn">
+                                      <button class="submit-btn"  href="/payment" value="checkReservation">make reservation</button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+            
+            <!-- Container (Work Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="work">
+          <h3 class="w3-center">OUR WORK</h3>
+          <p class="w3-center"><em>Here are some pictures captured during our weddings.<br> Click on the images to get the full experience</em></p><br>
+            
+          <!-- Responsive Grid of images -->
+          <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+              <img src="work_1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="You'll have memories to last with us">
+            </div>
+        
+            <div class="w3-col m3">
+              <img src="work_2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Satisfied clients on their special day">
+            </div>
+        
+            <div class="w3-col m3">
+              <img src="work_3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Our Wedding Photographers are simply the best!">
+            </div>
+        
+            <div class="w3-col m3">
+              <img src="work_4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We pay close attention to every detail">
+            </div>
+          </div>
+        
+          <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+              <img src="work_5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Intricate flower design by our team in house">
+            </div>
+        
+            <div class="w3-col m3">
+              <img src="work_6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Creative flower arrangement catered to your needs">
+            </div>
+        
+            <div class="w3-col m3">
+              <img src="work_7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="What's a bride without her bridesmaids?">
+            </div>
+        
+            <div class="w3-col m3">
+              <img src="work_8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We'll leave you feeling this happy after choosing us!">
+            </div>
+          </div>
+        </div>
+            
+         <!-- enable w3 modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+          <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+          </div>
+        </div>
+        
+        <!-- Third Parallax Image with CONTACT Text -->
+        <div class="bgimg-4 w3-display-container w3-opacity-min">
+          <div class="w3-display-middle">
+             <span class="w3-xxlarge w3-text-white w3-wide">CONTACT US</span>
+          </div>
+        </div>
+         
+         <!-- Container (Contact Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="contact">
+          <h3 class="w3-center">WHERE WE ARE</h3>
+          <p class="w3-center"><em>We'd Love For You To Get In Touch</em></p>
+        
+          <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+              <!-- Add Google Maps -->
+              <div id="" style="width:100%;height:400px;"></div>
+            </div>
+            <div class="w3-col m8 w3-panel">
+              <div class="w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> BUE, Cairo, Egypt <br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 01060072052<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:YourDay@bue.edu.eg<br>
+              </div>
+              <p>Swing by for a cup of <i class="fa fa-coffee"></i>, and let us make your day</p>
+             
+              
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+         
+        </body>
+        
+        <script>
+        function myMap()
+        {
+          myCenter=new google.maps.LatLng(53.396816, -2.981010);
+          var mapOptions= {
+            center:myCenter,
+            zoom:12, scrollwheel: false, draggable: false,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+        
+          var marker = new google.maps.Marker({
+            position: myCenter,
+          });
+          marker.setMap(map);
+        }
+        //Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE08IsNxowB1UrU5pi0xiPPSoyV1NSHsY&callback=myMap"></script>
+  <script>
+      //Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+          var x = document.getElementById("navSmall");
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+          } else {
+              x.className = x.className.replace(" w3-show", "");
+          }
+      }
+  </script>
+  </body>
+  </html>

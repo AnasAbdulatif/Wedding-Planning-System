@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/style.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
+        <title>Add Map</title>
+
+        <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+        <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: <%=lat%>, lng: <%=lag%> };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom:10,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+    </head>
+    <body>
+      
+<div class="w3-top">
+  <div class="w3-bar w3-dark-grey" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" 
+    href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+      </a>
+<a href="/" class="w3-bar-item w3-button"><i class="fa fa-home w3-margin-right"></i><b>Your</b>Day</a>
+  <a href="/payment" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-th"></i> Payment</a>
+  <a href="/venues_merseyside" class="w3-bar-item w3-button"><i class="fa fa-globe"></i> Venues</a>
+  <a href="/reservation" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-envelope"></i> Make Reservation</a>
+          <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-envelope"></i> Invitation QR</a>
+          <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-globe"></i> Map</a>
+          <a onclick="document.location='/login/'" class="w3-bar-item w3-button"> <i class='fas fa-sign-in-alt'></i> sign in</a>
+          <a onclick="document.location='/logout/'" class="w3-bar-item w3-button"> <i class='fas fa-sign-in-alt'></i> sign out</a>
+
+ </div>
+        <!-- Navbar on small screens -->
+        <div id="navSmall" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-hide-medium">
+          <a href="/venues_merseyside" class="w3-bar-item w3-button">Venues</a>
+          <a href="/payment" class="w3-bar-item w3-button">Payment</a>
+          <a onclick="document.location='/login/'" class="w3-bar-item w3-button">sign in</a>
+          <a onclick="document.location='/logout/'" class="w3-bar-item w3-button">sign out</a>
+        </div>
+      </div>
+        <h3>My Google Maps Demo</h3>
+        <!--The div element for the map -->
+        <div id="map"></div>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhMhlY2hghjeyJM0Z1RlyJmdzLMlpU7aA&callback=initMap&libraries=&v=weekly"
+            async></script>
+    </body>
+</html>
